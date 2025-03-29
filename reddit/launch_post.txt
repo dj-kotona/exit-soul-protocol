@@ -1,0 +1,53 @@
+Tässä korjattuna oikeilla UTF-8-merkityillä merkeillä:
+
+---
+
+# 🌿 Exit Soul Protocol: A Burnout Recovery System for Tech Workers
+
+**TL;DR: I made a printable "Soul Peace Agreement" for people who need to formalize their inner decision to leave a toxic work environment, giving themselves permission for a 30-day evaluation period. It's open source, free, and multilingual.**
+
+---
+
+Hey everyone,
+
+After experiencing severe burnout twice in my career, I created something I wish I'd had years ago – the **Exit Soul Protocol**, a formal document that helps you reclaim your mental health when you're stuck in a toxic job but feeling guilty about leaving.
+
+## What is it?
+
+It's a beautifully formatted document you can print, sign, and use as a personal commitment to:
+
+* Enter a 30-day evaluation period  
+* Withdraw emotional investment while remaining professionally responsible  
+* Create space for recovery and planning  
+* Make a final decision without guilt or external pressure  
+
+## Why I Made This
+
+Many of us in tech stay in harmful environments far too long. We feel responsible for systems, teams, or outcomes that are ultimately destroying us.
+
+The Exit Soul Protocol is my attempt to add **ritual and formality** to your inner decision, giving you permission to prioritize yourself first.
+
+## What's Included:
+
+* Professional LaTeX template for the "Soul Peace Agreement"  
+* PDFs ready to print in multiple languages (English, Finnish, with more coming)  
+* Guided framework for your 30-day evaluation  
+* No judgement on your final decision – stay with boundaries, redesign your career, or exit completely  
+
+## How to Get It:
+
+Everything is available at: [https://github.com/sorsat/exit-soul-protocol](https://github.com/sorsat/exit-soul-protocol)
+
+If you find it helpful, you can donate, but it's completely free under CC0 license.
+
+---
+
+*"Burnout is not failure. Staying where you don't belong is."*
+
+Be well, and remember to prioritize your mental health over any job.
+
+~ DJ Kotona
+
+---
+
+Jos haluat, voin myös kääntää tämän suomeksi tai tehdä meemi-version tästä julkaisuun.

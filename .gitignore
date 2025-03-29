@@ -1,0 +1,30 @@
+# LaTeX temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# PDF output (if you prefer to generate them instead of storing in repo)
+# Uncomment if you don't want to track PDFs
+pdf/*.pdf
+soulpeace/*.pdf
+
+# Windows specific
+Thumbs.db
+desktop.ini
+
+# PowerShell generated files
+temp_file_list.txt
+exit_soul_protocol_status.txt
+
+# Editor temporary files
+*.swp
+*~
+.DS_Store
+
+$directory
