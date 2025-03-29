@@ -1,0 +1,21 @@
+name: Release Existing SoulPeace PDFs
+
+on:
+  push:
+    tags:
+      - '*-v*.*.*'  # Run on language-specific tags like jp-v1.0.1
+      - 'quick-v*.*.*'  # Run on quick release tags
+
+jobs:
+  release-pdfs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Create Release with existing PDFs
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            pdf/*.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

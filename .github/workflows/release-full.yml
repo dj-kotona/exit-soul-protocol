@@ -1,0 +1,44 @@
+name: Release SoulPeace PDFs (Full Compilation)
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'  # Run on tags like v1.0.0 (not version-specific tags)
+      - 'full-v*.*.*'  # Run on tags like full-v1.0.0
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup TeX Live
+      uses: teatimeguest/setup-texlive-action@v3
+      with:
+        packages: >
+          scheme-basic
+          fontspec
+          geometry
+          hyperref
+          setspace
+          parskip
+          polyglossia
+          xecjk
+          noto
+
+    - name: Compile PDFs
+      run: |
+        mkdir -p soulpeace_pdf
+        for file in soulpeace/*.tex; do
+          xelatex -interaction=nonstopmode -output-directory soulpeace_pdf "$file"
+        done
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: |
+          soulpeace_pdf/*.pdf
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
