@@ -15,7 +15,8 @@ function Get-DocumentVersion {
     )
     
     $content = Get-Content -Path $TexFile -Raw
-    $versionPattern = '(?:Version|Versie|Versão|Versión|Версія|バージョン|Wersja)\s+(\d+\.\d+)'
+    # Simplified version pattern that should work regardless of encoding issues
+    $versionPattern = 'Version\s+(\d+\.\d+)'
     $match = [regex]::Match($content, $versionPattern)
     
     if ($match.Success) {
