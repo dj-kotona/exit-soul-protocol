@@ -50,10 +50,21 @@ CC0 – Use freely, remix, adapt, print.
 
 ---
 
-*DJ Kotona x rsuoni movement*
+*DJ Kotona*
+*I just started as a paskapostaajanananananana😊*
+*See my other work:*
+*https://ko-fi.com/djkotona*
+*https://www.reddit.com/user/Specific-Yogurt4731/*
+*https://www.youtube.com/@DJKotona*
+---
+*Support the things that really matters:*
+*https://war.ukraine.ua/donate/*
+
 
 ```powershell
 powershell.exe -ExecutionPolicy Bypass -File ./build_pdfs.ps1
 
 powershell.exe -ExecutionPolicy Bypass -File ./fix_encoding.ps1
+
+xelatex -output-directory="soulpeace" "soulpeace\soulpeace_jp.tex"
 ```
