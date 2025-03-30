@@ -5,6 +5,7 @@ on:
     tags:
       - 'v*.*.*'  # Run on tags like v1.0.0 (not version-specific tags)
       - 'full-v*.*.*'  # Run on tags like full-v1.0.0
+  workflow_dispatch:  # Allow manual triggering for testing
 
 jobs:
   build-and-release:
@@ -43,9 +44,17 @@ jobs:
         done
 
     - name: Create Release
+      if: startsWith(github.ref, 'refs/tags/')
       uses: softprops/action-gh-release@v2
       with:
         files: |
           soulpeace_pdf/*.pdf
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Upload artifacts when manually triggered
+      if: github.event_name == 'workflow_dispatch'
+      uses: actions/upload-artifact@v3
+      with:
+        name: compiled-pdfs
+        path: soulpeace_pdf/*.pdf
