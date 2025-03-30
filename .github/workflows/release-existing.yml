@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
+      - name: Create PDF output directory
+        run: mkdir -p pdf
+      
       - name: Create Release with existing PDFs
         uses: softprops/action-gh-release@v2
         with:
