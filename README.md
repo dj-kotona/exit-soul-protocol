@@ -39,7 +39,9 @@ This repository provides a symbolic tool to support the decision to leave a job 
 
 If this helped you regain some control –  
 ☕ [Ko-fi.com/djkotona](https://ko-fi.com/djkotona)  
-₿ BTC: `bc1qs0afej629pf5ggxsq5u9tu6juhq9sklmdzztqs`
+₿ BTC: `bc1qs0afej629pf5ggxsq5u9tu6juhq9sklmdzztqs`  
+
+See [donate.md](donate.md) for more details about supporting this project.
 
 ---
 https://war.ukraine.ua/support-ukraine/
@@ -50,16 +52,20 @@ CC0 – Use freely, remix, adapt, print.
 
 ---
 
-*DJ Kotona*
-*I just started as a paskapostaajanananananana😊*
-*See my other work:*
-*https://ko-fi.com/djkotona*
-*https://www.reddit.com/user/Specific-Yogurt4731/*
-*https://www.youtube.com/@DJKotona*
----
-*Support the things that really matters:*
-*https://war.ukraine.ua/donate/*
+*DJ Kotona*  
+*Finnish AI-artist on a mission: end war, crush dictatorships, survive capitalism.*
 
+**Find me online:**  
+* 📧 [djkotona@gmail.com](mailto:djkotona@gmail.com)
+* 📱 [Reddit](https://www.reddit.com/user/Specific-Yogurt4731/)
+* ☕ [Ko-Fi](https://ko-fi.com/djkotona)
+* 🎵 [Spotify](https://creators.spotify.com/pod/show/dj-kotona)
+* 📺 [YouTube](https://www.youtube.com/@DJKotona)
+* 💻 [GitHub](https://github.com/dj-kotona)
+
+*Support the things that really matter:*  
+* 🇺🇦 [Help Ukraine](https://war.ukraine.ua/donate/)
+* 🌿 [Puoluerekisteri](https://puoluerekisteri.fi/#/puolue/60)
 
 ```powershell
 powershell.exe -ExecutionPolicy Bypass -File ./build_pdfs.ps1
