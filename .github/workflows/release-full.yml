@@ -1,70 +1,68 @@
 name: Release SoulPeace PDFs (Full Compilation)
 
 permissions:
-  contents: read
+  contents: write
   actions: write
-  
+
 on:
   push:
     tags:
-      - 'v*.*.*'  # Run on tags like v1.0.0 (not version-specific tags)
+      - 'v*.*.*'       # Run on tags like v1.0.0
       - 'full-v*.*.*'  # Run on tags like full-v1.0.0
-  workflow_dispatch:  # Allow manual triggering for testing
+  workflow_dispatch:    # Allow manual triggering for testing
 
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Install required fonts
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y fonts-liberation fonts-noto fonts-noto-cjk
+      - name: Install required fonts
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-liberation fonts-noto fonts-noto-cjk
 
-    - name: Setup TeX Live
-      uses: teatimeguest/setup-texlive-action@v3
-      with:
-        packages: >
-          scheme-basic
-          fontspec
-          geometry
-          hyperref
-          setspace
-          parskip
-          polyglossia
-          xecjk
-          noto
+      - name: Setup TeX Live
+        uses: teatimeguest/setup-texlive-action@v3
+        with:
+          packages: >
+            scheme-basic
+            fontspec
+            geometry
+            hyperref
+            setspace
+            parskip
+            polyglossia
+            xecjk
+            noto
 
-    - name: Compile PDFs
-      run: |
-        mkdir -p soulpeace_pdf
-        for file in soulpeace/*.tex; do
-          echo "Compiling $file..."
-          xelatex -interaction=nonstopmode -output-directory soulpeace_pdf "$file"
-          # Run a second time to resolve references
-          xelatex -interaction=nonstopmode -output-directory soulpeace_pdf "$file"
-        done
-        
-    - name: List generated PDF files
-      run: |
-        ls -la soulpeace_pdf/
+      - name: Compile PDFs
+        run: |
+          mkdir -p soulpeace_pdf
+          for file in soulpeace/*.tex; do
+            echo "Compiling $file..."
+            xelatex -interaction=nonstopmode -output-directory soulpeace_pdf "$file"
+            xelatex -interaction=nonstopmode -output-directory soulpeace_pdf "$file"
+          done
 
-    - name: Create Release
-      if: startsWith(github.ref, 'refs/tags/')
-      uses: softprops/action-gh-release@v2
-      with:
-        files: |
-          soulpeace_pdf/*.pdf
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
-    - name: Upload artifacts when manually triggered
-      if: github.event_name == 'workflow_dispatch'
-      uses: actions/upload-artifact@v3
-      with:
-        name: compiled-pdfs
-        path: soulpeace_pdf/*.pdf
-        if-no-files-found: error
+      - name: List generated PDF files
+        run: ls -la soulpeace_pdf/
+
+      - name: Create Release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            soulpeace_pdf/*.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload artifacts when manually triggered
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v3.1.3
+        with:
+          name: compiled-pdfs
+          path: soulpeace_pdf/*.pdf
+          if-no-files-found: error
