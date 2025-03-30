@@ -38,10 +38,15 @@ jobs:
       run: |
         mkdir -p soulpeace_pdf
         for file in soulpeace/*.tex; do
+          echo "Compiling $file..."
           xelatex -interaction=nonstopmode -output-directory soulpeace_pdf "$file"
           # Run a second time to resolve references
           xelatex -interaction=nonstopmode -output-directory soulpeace_pdf "$file"
         done
+        
+    - name: List generated PDF files
+      run: |
+        ls -la soulpeace_pdf/
 
     - name: Create Release
       if: startsWith(github.ref, 'refs/tags/')
@@ -58,3 +63,4 @@ jobs:
       with:
         name: compiled-pdfs
         path: soulpeace_pdf/*.pdf
+        if-no-files-found: error

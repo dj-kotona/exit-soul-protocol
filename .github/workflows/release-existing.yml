@@ -13,8 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Create PDF output directory
-        run: mkdir -p pdf
+      - name: List PDF directory contents
+        run: ls -la pdf/
       
       - name: Create Release
         if: startsWith(github.ref, 'refs/tags/')
@@ -31,3 +31,4 @@ jobs:
         with:
           name: existing-pdfs
           path: pdf/*.pdf
+          if-no-files-found: warn  # This will warn rather than fail if no files are found
