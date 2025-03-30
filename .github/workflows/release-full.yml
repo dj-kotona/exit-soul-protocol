@@ -1,5 +1,9 @@
 name: Release SoulPeace PDFs (Full Compilation)
 
+permissions:
+  contents: read
+  actions: write
+  
 on:
   push:
     tags:
