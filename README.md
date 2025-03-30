@@ -3,15 +3,13 @@
 > A burnout exit ritual for engineers, developers, and humans.  
 > Print it, sign it, reclaim your peace.
 
-This repository provides a symbolic tool to support the decision to leave a job responsibly – but soul-first. It includes printable agreements, donation links, memes, and a space to share stories.
+This repository provides a symbolic tool to support the decision to leave a job responsibly – but soul-first. It includes printable agreements and donation links.
 
 ## Features
 
 - 🌱 Soul Peace Agreement (LaTeX-formatted, multilingual)
 - 🖨️ Printable PDF files
-- 📣 Reddit-ready launch post
 - ☕ Ko-fi & Bitcoin donation links
-- 📚 Burnout story archive
 
 ## Available PDF Files
 
@@ -19,21 +17,35 @@ This repository provides a symbolic tool to support the decision to leave a job 
 |----------|------------|----------------------------------------|
 | 🇬🇧 English | March 2025 | [Soul Peace Agreement (EN)](pdf/soulpeace_en.pdf) |
 | 🇫🇮 Finnish | March 2025 | [Soul Peace Agreement (FI)](pdf/soulpeace_fi.pdf) |
+| 🇩🇪 German | March 2025 | [Soul Peace Agreement (DE)](pdf/soulpeace_de.pdf) |
+| 🇪🇸 Spanish | March 2025 | [Soul Peace Agreement (ES)](pdf/soulpeace_es.pdf) |
+| 🇫🇷 French | March 2025 | [Soul Peace Agreement (FR)](pdf/soulpeace_fr.pdf) |
+| 🇮🇹 Italian | March 2025 | [Soul Peace Agreement (IT)](pdf/soulpeace_it.pdf) |
+| 🇯🇵 Japanese | March 2025 | [Soul Peace Agreement (JP)](pdf/soulpeace_jp.pdf) |
+| 🇳🇱 Dutch | March 2025 | [Soul Peace Agreement (NL)](pdf/soulpeace_nl.pdf) |
+| 🇵🇱 Polish | March 2025 | [Soul Peace Agreement (PL)](pdf/soulpeace_pl.pdf) |
+| 🇵🇹 Portuguese | March 2025 | [Soul Peace Agreement (PT)](pdf/soulpeace_pt.pdf) |
+| 🇸🇪 Swedish | March 2025 | [Soul Peace Agreement (SV)](pdf/soulpeace_sv.pdf) |
+| 🇺🇦 Ukrainian | March 2025 | [Soul Peace Agreement (UK)](pdf/soulpeace_uk.pdf) |
+
+All PDFs are also available with version numbers (e.g., [soulpeace_en_v1.00.pdf](pdf/soulpeace_en_v1.00.pdf))
 
 ## Languages
 
-- 🇬🇧 English  
-- 🇫🇮 Finnish  
-- 🇺🇦 Ukrainian
-- 🇫🇷 French
-- 🇪🇸 Spanish  
-- 🇩🇪 German  
-- 🇯🇵 Japanese  
-- 🇮🇹 Italian
-- 🇵🇹 Portuguese
-- 🇳🇱 Dutch
-- 🇸🇪 Swedish
-- 🇵🇱 Polish
+Available in twelve languages:
+
+- 🇬🇧 English (EN)  
+- 🇫🇮 Finnish (FI)  
+- 🇺🇦 Ukrainian (UK)
+- 🇫🇷 French (FR)
+- 🇪🇸 Spanish (ES)  
+- 🇩🇪 German (DE)  
+- 🇯🇵 Japanese (JP)  
+- 🇮🇹 Italian (IT)
+- 🇵🇹 Portuguese (PT)
+- 🇳🇱 Dutch (NL)
+- 🇸🇪 Swedish (SV)
+- 🇵🇱 Polish (PL)
 
 ## 💖 Donate
 

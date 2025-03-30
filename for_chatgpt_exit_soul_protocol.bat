@@ -14,10 +14,6 @@ if exist "soulpeace\" dir /s /b soulpeace\*.tex > "%tempFile%"
 REM Find all PDF files in the pdf folder and append to the temp file
 if exist "pdf\" dir /s /b pdf\*.pdf >> "%tempFile%"
 
-REM Add Reddit content and stories
-if exist "reddit\" dir /s /b reddit\*.txt >> "%tempFile%"
-if exist "stories\" dir /s /b stories\*.md >> "%tempFile%"
-
 REM Append the additional files to the temp file
 for %%a in (%filesToAdd%) do (
     if exist "%%a" (
@@ -82,8 +78,6 @@ echo.
 echo Files included:
 echo - LaTeX source files (.tex)
 echo - PDF files (if available)
-echo - Reddit content
-echo - Burnout stories
 echo - Project documentation
 echo.
 echo The content has been copied to your clipboard.

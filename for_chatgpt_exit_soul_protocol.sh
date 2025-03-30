@@ -29,22 +29,6 @@ if [ -f "soulpeace/soulpeace_fi.tex" ]; then
   echo -e "\n\n" >> "$OUT"
 fi
 
-# Reddit launch post
-if [ -f "reddit/launch_post.txt" ]; then
-  echo "reddit/launch_post.txt" >> "$OUT"
-  echo "--------------------------------------------------" >> "$OUT"
-  cat reddit/launch_post.txt >> "$OUT"
-  echo -e "\n\n" >> "$OUT"
-fi
-
-# Burnout stories
-if [ -f "stories/burnout_logs.md" ]; then
-  echo "stories/burnout_logs.md" >> "$OUT"
-  echo "--------------------------------------------------" >> "$OUT"
-  cat stories/burnout_logs.md >> "$OUT"
-  echo -e "\n\n" >> "$OUT"
-fi
-
 # Donation information
 if [ -f "donate.md" ]; then
   echo "donate.md" >> "$OUT"
